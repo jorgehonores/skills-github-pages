@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Informativo: Proyectos Nestlé Macul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+        :root {
+            --recupac-lime: #B1D600;
+            --recupac-dark-green: #006845;
+            --recupac-orange: #FE5000;
+            --recupac-purple: #A369B1;
+            --recupac-light-gray: #f0f0f0;
+            --recupac-dark-gray: #333333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--recupac-light-gray);
+        }
+
+        .header-gradient {
+            background: linear-gradient(90deg, var(--recupac-dark-green) 0%, var(--recupac-lime) 100%);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 6px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-container.left {
+            left: 0;
+        }
+
+        .timeline-container.right {
+            left: 50%;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -14px;
+            background-color: white;
+            border: 4px solid var(--recupac-orange);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-container.right::after {
+            left: -11px;
+        }
+        
+        .timeline-container.left::after {
+            right: -14px;
+        }
+        
+        .timeline-container .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+        }
+
+        .timeline-container .content h3 {
+            font-weight: 900;
+            color: var(--recupac-dark-green);
+        }
+
+        .status-dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .status-pending { background-color: var(--recupac-orange); }
+        .status-progress { background-color: var(--recupac-purple); }
+        .status-done { background-color: var(--recupac-lime); }
+        .status-blocked { background-color: #dc2626; } /* Red for blocked */
+        
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-container.left, .timeline-container.right {
+                left: 0%;
+            }
+
+            .timeline-container.left::after, .timeline-container.right::after {
+                left: 17px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header class="header-gradient text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="w-12 h-12"></div> <!-- Placeholder for logo space -->
+            <h1 class="text-2xl md:text-4xl font-black tracking-wide text-right">FLASH INFORMATIVO</h1>
+        </div>
+        <div class="container mx-auto text-right">
+             <h2 class="text-lg md:text-xl font-bold">Proyectos NESTLÉ MACUL</h2>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <div class="container mx-auto px-4">
+
+            <!-- DEPACKAGER Section -->
+            <div class="mb-16">
+                <h2 class="text-4xl font-black text-center mb-2 text-gray-800">Proyecto: DEPACKAGER</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Línea de tiempo con los hitos clave para la puesta en marcha del equipo, enfocada en resolver pendientes técnicos y de seguridad exigidos por el cliente.</p>
+
+                <div class="timeline">
+                    <!-- Evento 1 -->
+                    <div class="timeline-container left">
+                        <div class="content border-recupac-purple">
+                            <h2 class="font-bold text-xl" style="color:var(--recupac-purple);">Marzo 2025</h2>
+                            <h3>Levantamiento de Pendientes Críticos</h3>
+                            <p class="text-gray-700 mt-2">Se identifican 11 puntos pendientes para la puesta en marcha, 5 de ellos dependientes de Arcatec. Los principales son:</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-600">
+                                <li>Modificación de ganchos de maxisacas (exigencia SHE Nestlé).</li>
+                                <li>Falta de luz piloto en sistema de seguridad (interlock).</li>
+                                <li>Instalación de sistema de agua para lavado.</li>
+                                <li>Falta de sensor de nivel en estanque de líquidos.</li>
+                            </ul>
+                             <p class="text-sm text-gray-500 mt-3 font-semibold">COMPROMISO: Operativo antes del 31/03.</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="timeline-container right">
+                         <div class="content" style="border-color: #dc2626;">
+                            <h2 class="font-bold text-xl" style="color:#dc2626;">15-17 Abril 2025</h2>
+                            <h3>Ejecución Fallida y Bloqueos</h3>
+                            <div class="flex items-center mt-2">
+                                <span class="status-dot status-blocked"></span>
+                                <span class="font-bold text-gray-800">ESTADO: BLOQUEADO</span>
+                            </div>
+                            <p class="text-gray-700 mt-2">Se suspenden trabajos clave por falta de validación de permisos de Nestlé y credencial vencida de técnico soldador.</p>
+                             <ul class="list-disc list-inside mt-2 text-gray-600">
+                                <li><b>Cancelado:</b> Intervención tablero eléctrico.</li>
+                                <li><b>Cancelado:</b> Instalación de mangueras.</li>
+                                <li><b>Cancelado:</b> Modificación de gancho (TAP).</li>
+                                 <li><b>Avance Parcial:</b> Arcatec instala válvulas, pero usa un tipo incorrecto.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="timeline-container left">
+                         <div class="content" style="border-color:var(--recupac-orange);">
+                            <h2 class="font-bold text-xl" style="color:var(--recupac-orange);">21 Abril 2025</h2>
+                            <h3>Re-planificación y Burocracia</h3>
+                            <p class="text-gray-700 mt-2">Reunión con Nestlé define la necesidad de crear un "paso a paso" detallado de los trabajos para poder gestionar y validar los permisos (PTS). El proyecto queda en pausa hasta la entrega y aprobación de esta documentación.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento 4 -->
+                    <div class="timeline-container right">
+                         <div class="content" style="border-color:var(--recupac-dark-green);">
+                            <h2 class="font-bold text-xl" style="color:var(--recupac-dark-green);">09 Junio 2025</h2>
+                            <h3>Normalización de Tablero Eléctrico</h3>
+                            <p class="text-gray-700 mt-2">Se programa visita de técnico (Victor Abarca) para normalizar el tablero eléctrico, cuya llave de seguridad se encontraba trabada mecánicamente. Hito necesario para poder avanzar con las demás tareas eléctricas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 5 -->
+                     <div class="timeline-container left">
+                         <div class="content" style="border-color:var(--recupac-lime);">
+                             <h2 class="font-bold text-xl" style="color:var(--recupac-lime);">18 Junio 2025 (Propuesto)</h2>
+                             <h3>Plan de Acción Final (Arcatec)</h3>
+                             <div class="flex items-center mt-2">
+                                <span class="status-dot status-done"></span>
+                                <span class="font-bold text-gray-800">PRÓXIMOS PASOS</span>
+                            </div>
+                            <p class="text-gray-700 mt-2">Se reagendan los trabajos suspendidos con Arcatec. Las tareas a ejecutar son:</p>
+                             <ul class="list-disc list-inside mt-2 text-gray-600">
+                                 <li><b>Cambio de válvula antirretorno:</b> Reemplazar la pieza incorrecta.</li>
+                                 <li><b>Modificación de ganchos:</b> Ajuste mecánico sin soldadura para cumplir con exigencia SHE.</li>
+                             </ul>
+                             <p class="text-sm text-gray-500 mt-3 font-semibold">OBJETIVO: Dejar el equipo en condiciones de operar la semana del 16/06.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CERO ACCESO Section -->
+            <div class="mt-20">
+                <h2 class="text-4xl font-black text-center mb-2 text-gray-800">Proyecto: CERO ACCESO</h2>
+                 <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Seguimiento a la implementación del sistema de acceso seguro para el autocompactador, desde la instalación inicial hasta las mejoras de seguridad post-entrega.</p>
+
+                <div class="timeline">
+                    <!-- Evento 1 -->
+                    <div class="timeline-container left">
+                        <div class="content" style="border-color:var(--recupac-dark-green);">
+                            <h2 class="font-bold text-xl" style="color:var(--recupac-dark-green);">Marzo 2025</h2>
+                            <h3>Instalación Mecánica y Eléctrica</h3>
+                             <p class="text-gray-700 mt-2">Arcatec finaliza la instalación mecánica. La parte eléctrica queda pendiente y avanza con dificultades por falta de herramientas certificadas y personal con cursos requeridos por Nestlé. La conexión final al tablero cliente es responsabilidad de Recupac.</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="timeline-container right">
+                         <div class="content" style="border-color:var(--recupac-lime);">
+                            <h2 class="font-bold text-xl" style="color:var(--recupac-lime);">11 Abril 2025</h2>
+                            <h3>Entrega Operativa Inicial</h3>
+                            <div class="flex items-center mt-2">
+                                <span class="status-dot status-done"></span>
+                                <span class="font-bold text-gray-800">ESTADO: ENTREGADO</span>
+                            </div>
+                            <p class="text-gray-700 mt-2">Se finalizan las últimas correcciones y se entrega el sistema "Cero Acceso" como operativo. Se inicia la capacitación a los operadores. Queda como tarea menor pendiente la canalización final de la acometida eléctrica interna.</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="timeline-container left">
+                         <div class="content" style="border-color:#dc2626;">
+                             <h2 class="font-bold text-xl" style="color:#dc2626;">14 Mayo 2025</h2>
+                             <h3>ALERTA DE SEGURIDAD: Levantamiento Post-Entrega</h3>
+                             <p class="text-gray-700 mt-2">Una inspección en terreno de Nestlé (Analía) levanta <b>observaciones de seguridad críticas</b> que impiden validar la máquina:</p>
+                             <ul class="list-disc list-inside mt-2 text-gray-600">
+                                 <li><b>Falta de manillas en puertas:</b> Alto riesgo de atrapamiento de dedos.</li>
+                                 <li><b>Pedal de activación mal posicionado:</b> Obstruye la visibilidad del operador durante el volteo.</li>
+                             </ul>
+                             <p class="text-sm text-red-700 mt-3 font-semibold">El equipo NO se considera operativo hasta resolver estas brechas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 4 -->
+                    <div class="timeline-container right">
+                         <div class="content" style="border-color:var(--recupac-purple);">
+                            <h2 class="font-bold text-xl" style="color:var(--recupac-purple);">28 Mayo 2025</h2>
+                            <h3>Coordinación de Mejoras de Seguridad</h3>
+                             <p class="text-gray-700 mt-2">Se define que la instalación de manillas y la reubicación del pedal son urgentes. Se asigna la tarea a Arcatec, ya que se considera parte de la correcta implementación del sistema.</p>
+                             <p class="text-sm text-gray-500 mt-3 font-semibold">CONTEXTO: No se avanzará con nuevos sistemas de Cero Acceso hasta que el actual esté 100% operativo y validado por Nestlé.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento 5 -->
+                     <div class="timeline-container left">
+                         <div class="content" style="border-color:var(--recupac-lime);">
+                             <h2 class="font-bold text-xl" style="color:var(--recupac-lime);">18 Junio 2025 (Propuesto)</h2>
+                             <h3>Plan de Acción Final (Arcatec)</h3>
+                            <div class="flex items-center mt-2">
+                                <span class="status-dot status-done"></span>
+                                <span class="font-bold text-gray-800">PRÓXIMOS PASOS</span>
+                            </div>
+                            <p class="text-gray-700 mt-2">Se reprograman los trabajos con Arcatec para solucionar las brechas de seguridad:</p>
+                             <ul class="list-disc list-inside mt-2 text-gray-600">
+                                 <li><b>Instalación de manillas</b> en puertas para eliminar riesgo de atrapamiento.</li>
+                                 <li><b>Reposicionamiento de pedalera</b> para garantizar visibilidad del operador.</li>
+                             </ul>
+                              <p class="text-sm text-gray-500 mt-3 font-semibold">OBJETIVO: Dejar el equipo en condiciones de ser validado por Nestlé.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center p-4 mt-8 bg-gray-800 text-white">
+        <p>Este es un resumen ejecutivo. La información detallada se encuentra en las minutas de reunión correspondientes.</p>
+        <p class="text-sm opacity-75 mt-1">Generado el 10 de Junio de 2025</p>
+    </footer>
+
+</body>
+</html>
